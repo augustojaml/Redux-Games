@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { IStoreReducers } from '../../_global/store';
 import { ICartState } from '../../_global/store/modules/carts/cartsTypes';
+import { ToggleTheme } from '../ToggleTheme';
 
 interface IHeaderProps {
   title?: string;
@@ -21,16 +22,19 @@ export function Header({ title = 'Header' }: IHeaderProps) {
             <h1>{title}</h1>
           </Link>
 
-          <Link to="/cart">
-            <CartContainer>
-              <BiShoppingBag />
-              {items.length > 0 && (
-                <div>
-                  <span>{items.length}</span>
-                </div>
-              )}
-            </CartContainer>
-          </Link>
+          <div className="cart">
+            <ToggleTheme />
+            <Link to="/cart">
+              <CartContainer>
+                <BiShoppingBag />
+                {items.length > 0 && (
+                  <div>
+                    <span>{items.length}</span>
+                  </div>
+                )}
+              </CartContainer>
+            </Link>
+          </div>
         </Content>
       </Container>
     </>

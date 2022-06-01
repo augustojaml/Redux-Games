@@ -6,7 +6,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   background-color: ${({ theme }) => theme.colors.main002};
-  color: ${({ theme }) => theme.colors.background100};
+  color: ${({ theme }) => theme.colors.background050};
   height: 12rem;
 
   max-width: 900px;
@@ -21,7 +21,6 @@ export const Content = styled.div`
     font-size: 4rem;
   }
   h1 {
-    color: ${({ theme }) => theme.colors.main001};
     font-size: 2.5rem;
     margin: 1rem 0 0.2rem;
   }

@@ -15,10 +15,19 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  .cart {
+    display: flex;
+    align-items: center;
+    > div {
+      margin-top: 0.3rem;
+      margin-right: 0.5rem;
+    }
+  }
 `;
 
 export const CartContainer = styled.div`
   position: relative;
+
   svg {
     width: 2.5rem;
     height: 2.5rem;

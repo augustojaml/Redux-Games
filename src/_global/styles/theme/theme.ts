@@ -25,13 +25,13 @@ export const theme = {
   dark: {
     name: 'dark',
     colors: {
-      background050: '#202024',
+      background050: '#c0abf2',
       background100: '#121214',
 
       main001: '#8257e5',
-      main002: '#9466ff',
+      main002: '#202024',
       main003: '#db3a2c',
-      main004: '#ff068a',
+      main004: '#466fff',
 
       primary500: '#007bff',
       secondary500: '#6c757d',
