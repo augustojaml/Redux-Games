@@ -5,9 +5,6 @@
   <a href="https://opensource.org/licenses/MIT">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-6E40C9?style=flat-square">
   </a>
- 
-<img align="right" style="width: 150px" src="redux-games-dark.png" width="35%" alt="redux-games-dark.png">
-
 </p>
 
 <p align="center">  
