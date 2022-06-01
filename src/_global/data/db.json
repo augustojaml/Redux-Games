@@ -4,7 +4,7 @@
       "id": 1,
       "image": "https://raw.githubusercontent.com/augustojaml/augustoml-images/master/castle-of-illusion.png",
       "title": "Castle of Illusion",
-      "price": 199.98
+      "price": 119.98
     },
     {
       "id": 2,
@@ -16,25 +16,25 @@
       "id": 3,
       "image": "https://raw.githubusercontent.com/augustojaml/augustoml-images/master/godofwar.png",
       "title": "God Of War Ragnarok",
-      "price": 140.47
+      "price": 130.47
     },
     {
       "id": 4,
       "image": "https://raw.githubusercontent.com/augustojaml/augustoml-images/master/mario-cart.png",
       "title": "Mario Cart",
-      "price": 120.87
+      "price": 140.87
     },
     {
       "id": 5,
       "image": "https://raw.githubusercontent.com/augustojaml/augustoml-images/master/metroid-prime.png",
       "title": "Metroid Prime",
-      "price": 120.87
+      "price": 150.87
     },
     {
       "id": 6,
       "image": "https://raw.githubusercontent.com/augustojaml/augustoml-images/master/tomb-raiden.png",
       "title": "Tomb Raider",
-      "price": 120.87
+      "price": 160.87
     }
   ],
   "stock": [

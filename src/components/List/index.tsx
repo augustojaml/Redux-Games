@@ -1,11 +1,44 @@
+import { useCallback } from 'react';
 import { BiMinusCircle, BiPlusCircle } from 'react-icons/bi';
 import { BsTrash } from 'react-icons/bs';
+import { useDispatch, useSelector } from 'react-redux';
+import { IStoreReducers, StoreDispatch } from '../../_global/store';
+import { cartsSlice } from '../../_global/store/modules/carts/cartsSlice';
+import { checkProductStockByIdAndAddToCart } from '../../_global/store/modules/carts/cartsThunk';
+import { ICartState, IProduct } from '../../_global/store/modules/carts/cartsTypes';
 import { Container, Content } from './styled';
 
-import data from '../../_global/data/db.json';
-
 export function List() {
-  const items = [0, 1, 2];
+  const { items, productOutOfStock } = useSelector<IStoreReducers, ICartState>(
+    (state) => state.carts
+  );
+
+  const dispatch: StoreDispatch = useDispatch();
+
+  const totals = items.reduce((accumulator, item) => {
+    return (accumulator += item.quantity * item.product.price);
+  }, 0);
+
+  const handleAddProductQuantityToCard = useCallback(
+    (product: IProduct) => {
+      dispatch(checkProductStockByIdAndAddToCart(product));
+    },
+    [dispatch]
+  );
+
+  const handleRemoveProductQuantityToCard = useCallback(
+    (product: IProduct) => {
+      dispatch(cartsSlice.actions.removeProductQuantityToCart(product));
+    },
+    [dispatch]
+  );
+
+  const handleRemoveProductToCard = useCallback(
+    (product: IProduct) => {
+      dispatch(cartsSlice.actions.removeProductToCart(product));
+    },
+    [dispatch]
+  );
 
   return (
     <>
@@ -24,23 +57,36 @@ export function List() {
             </thead>
             <tbody>
               {items.map((item) => (
-                <tr key={item}>
+                <tr key={item.product.id}>
                   <td>
-                    <img src={data.products[0].image} alt={data.products[0].title} />
+                    <img src={item.product.image} alt={item.product.title} />
                   </td>
-                  <td>Lorem ipsum dolor sit amet consectetur.</td>
-                  <td>$ 150.00</td>
+                  <td>{item.product.title}</td>
+                  <td>$ {item.product.price}</td>
                   <td>
                     <div>
-                      <BiMinusCircle size={25} onClick={() => {}} />
-                      <input readOnly value={2} />
+                      <BiMinusCircle
+                        size={25}
+                        onClick={() => handleRemoveProductQuantityToCard(item.product)}
+                      />
 
-                      <BiPlusCircle size={25} onClick={() => {}} />
+                      <input readOnly value={item.quantity} />
+
+                      <BiPlusCircle
+                        size={25}
+                        onClick={() =>
+                          !productOutOfStock.includes(item.product.id) &&
+                          handleAddProductQuantityToCard(item.product)
+                        }
+                      />
                     </div>
+                    {productOutOfStock.includes(item.product.id) && (
+                      <strong>Insufficient stock</strong>
+                    )}
                   </td>
-                  <td>$ 300.00</td>
+                  <td>$ {item.quantity * item.product.price}</td>
                   <td>
-                    <BsTrash size={25} onClick={() => {}} />
+                    <BsTrash size={25} onClick={() => handleRemoveProductToCard(item.product)} />
                   </td>
                 </tr>
               ))}
@@ -49,7 +95,7 @@ export function List() {
             <tfoot>
               <tr>
                 <td colSpan={4}>Total</td>
-                <td colSpan={2}>$ {(199.0).toFixed(2)}</td>
+                <td colSpan={2}>$ {totals.toFixed(2)}</td>
               </tr>
             </tfoot>
           </table>

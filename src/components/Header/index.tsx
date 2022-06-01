@@ -1,6 +1,9 @@
 import { CartContainer, Container, Content } from './styled';
 import { BiShoppingBag } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { IStoreReducers } from '../../_global/store';
+import { ICartState } from '../../_global/store/modules/carts/cartsTypes';
 
 interface IHeaderProps {
   title?: string;
@@ -8,6 +11,8 @@ interface IHeaderProps {
 }
 
 export function Header({ title = 'Header' }: IHeaderProps) {
+  const { items } = useSelector<IStoreReducers, ICartState>((state) => state.carts);
+
   return (
     <>
       <Container>
@@ -19,9 +24,11 @@ export function Header({ title = 'Header' }: IHeaderProps) {
           <Link to="/cart">
             <CartContainer>
               <BiShoppingBag />
-              <div>
-                <span>{0}</span>
-              </div>
+              {items.length > 0 && (
+                <div>
+                  <span>{items.length}</span>
+                </div>
+              )}
             </CartContainer>
           </Link>
         </Content>

@@ -34,7 +34,7 @@ function useAppTheme() {
   return useContext(AppThemeContext);
 }
 
-function CustomTheme({ children }: IChildrenNode) {
+function AppTheme({ children }: IChildrenNode) {
   const { appTheme } = useAppTheme();
   return (
     <>
@@ -46,10 +46,10 @@ function CustomTheme({ children }: IChildrenNode) {
 function GlobalThemeProvider({ children }: IChildrenNode) {
   return (
     <AppThemeProvider>
-      <CustomTheme>
+      <AppTheme>
         {children}
         <GlobalStyles />
-      </CustomTheme>
+      </AppTheme>
     </AppThemeProvider>
   );
 }

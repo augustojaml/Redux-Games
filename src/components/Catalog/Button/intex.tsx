@@ -1,5 +1,7 @@
 import { ButtonHTMLAttributes } from 'react';
 import { BsCartPlus } from 'react-icons/bs';
+import { useTheme } from 'styled-components';
+import { Loading } from '../../Loader';
 import { Container } from './styled';
 
 interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -9,7 +11,9 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
 }
 
-export function Button({ title = 'Button', quantity = 1, isLoading = false, ...rest }: IButton) {
+export function Button({ title = 'Button', quantity = 0, isLoading = false, ...rest }: IButton) {
+  const theme = useTheme();
+
   return (
     <>
       <Container {...rest}>
@@ -17,7 +21,7 @@ export function Button({ title = 'Button', quantity = 1, isLoading = false, ...r
           <BsCartPlus />
           {quantity > 0 && <span>{quantity}</span>}
         </div>
-        <div className="title">{title}</div>
+        <div className="title">{isLoading ? <Loading color={theme.colors.main002} /> : title}</div>
       </Container>
     </>
   );

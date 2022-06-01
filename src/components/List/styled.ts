@@ -88,7 +88,7 @@ export const Content = styled.div`
           }
           strong {
             font-size: 0.8rem;
-            background-color: ${({ theme }) => theme.colors.main001};
+            background-color: ${({ theme }) => theme.colors.main002};
             height: 20px;
             border-radius: 10px;
             display: block;
