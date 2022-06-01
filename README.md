@@ -8,7 +8,7 @@
 </p>
 
 <p>
-<img align="right" style="width: 150px" src="logo.png" width="35%" alt="redux-games-dark.png">
+<img align="right" style="width: 150px" src="redux-games-dark.png" width="35%" alt="redux-games-dark.png">
 </p>
 
 # Presentation
