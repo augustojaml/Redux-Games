@@ -1,17 +1,15 @@
 # App Redux Games
 
 <p>
+<img align="right" style="width: 150px" src="redux-games-dark.png" width="35%" alt="redux-games-dark.png">
+</p>
+
+<p>
   <img src="https://img.shields.io/badge/made%20by-AUGUSTO%20MONTEIRO-6E40C9?style=flat-square">  
   <a href="https://opensource.org/licenses/MIT">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-6E40C9?style=flat-square">
   </a>
 </p>
-
-<p>
-<img align="right" style="width: 150px" src="redux-games-dark.png" width="35%" alt="redux-games-dark.png">
-</p>
-
-# Presentation
 
 <p align="center">  
   <img alt="appredux" src="redux-games.gif"/> 
