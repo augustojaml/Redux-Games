@@ -7,14 +7,14 @@
   </a>
 </p>
 
-<p align="center">  
-  <img alt="appredux" src="redux-games.gif"/> 
-</p>
-
-<hr />
-
 <p>
 <img align="right" style="width: 150px" src="logo.png" width="35%" alt="redux-games-dark.png">
+</p>
+
+# Presentation
+
+<p align="center">  
+  <img alt="appredux" src="redux-games.gif"/> 
 </p>
 
 # Dependencies
@@ -53,7 +53,7 @@ O App Redux é um App que criado com a finalidade de gerenciar estados com hedux
 ## Light Mode
 
 <p align="center">  
-  <img alt="appredux" src="app-desktop-light.png"/> 
+  <img alt="appredux" src="redux-games-light.png"/> 
 </p>
 
 ## Tecnologias
