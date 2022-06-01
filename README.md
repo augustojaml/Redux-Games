@@ -10,7 +10,7 @@
 <img align="right" style="width: 150px" src="logo.png" width="35%" alt="redux-games-dark.png">
 
 <p align="center">  
-  <img alt="appredux" src="aredux-games.gif"/> 
+  <img alt="appredux" src="redux-games.gif"/> 
 </p>
 
 # Dependencies
