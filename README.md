@@ -7,13 +7,11 @@
   </a>
 </p>
 
-## Light Mode
+<img align="right" style="width: 150px" src="logo.png" width="35%" alt="redux-games-dark.png">
 
 <p align="center">  
-  <img alt="appredux" src="redux-games.git"/> 
-</p
-
-<img align="right" style="width: 150px" src="/public/images/avatar.svg" width="35%" alt="redux-games-dark.png">
+  <img alt="appredux" src="aredux-games.gif"/> 
+</p>
 
 # Dependencies
 
