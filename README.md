@@ -17,6 +17,26 @@
 yarn add @reduxjs/toolkit redux react-redux axios react-loading polished styled-components && yarn add @types/styled-components json-server -D
 ```
 
+### How init app
+
+```bash
+  git clone https://github.com/augustojaml/Redux-Games
+```
+
+```bash
+  yarn start
+```
+
+```bash
+  yarn server
+```
+
+### new terminal
+
+```bash
+  yarn start
+```
+
 ## Tópicos
 
 [Sobre o Redux Games](#sobre-o-reduxGames)
