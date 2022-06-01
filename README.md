@@ -11,27 +11,21 @@
   <img alt="appredux" src="redux-games.gif"/> 
 </p>
 
-# Dependencies
+# Como iniciar ?
+
+- Clone app e abra a pasta com terminal
 
 ```bash
-yarn add @reduxjs/toolkit redux react-redux axios react-loading polished styled-components && yarn add @types/styled-components json-server -D
+  git clone https://github.com/augustojaml/Redux-Games.git
 ```
 
-### How init app
-
-```bash
-  git clone https://github.com/augustojaml/Redux-Games
-```
-
-```bash
-  yarn start
-```
+- Inicie json-server
 
 ```bash
   yarn server
 ```
 
-### new terminal
+- Abra um novo terminal
 
 ```bash
   yarn start
