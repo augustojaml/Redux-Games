@@ -7,12 +7,14 @@
   </a>
 </p>
 
-<p>
-<img align="right" style="width: 150px" src="logo.png" width="35%" alt="redux-games-dark.png">
-</p>
-
 <p align="center">  
   <img alt="appredux" src="redux-games.gif"/> 
+</p>
+
+<hr />
+
+<p>
+<img align="right" style="width: 150px" src="logo.png" width="35%" alt="redux-games-dark.png">
 </p>
 
 # Dependencies
